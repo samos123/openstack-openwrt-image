@@ -14,7 +14,18 @@ echo "src-git dtroyer https://github.com/dtroyer/openwrt-packages" >>feeds.conf.
 
 make defconfig
 
+
 make menuconfig
+# Target System: x86
+# Subtarget: KVM guest
+# Target Images
+# [*] ext4
+# (48) Root filesystem partition size (in MB)
+# (/dev/vda2) Root partition on target device
+# Base System
+# {*} block-mount (not sure, if yes to support root fs, parted too)
+# <*> rc.cloud
+
 
 make -j 8
 
